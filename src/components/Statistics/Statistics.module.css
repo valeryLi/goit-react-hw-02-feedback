@@ -1,0 +1,12 @@
+.statistics__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.list__item {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+}
