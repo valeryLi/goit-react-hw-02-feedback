@@ -8,7 +8,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         <button
           className={s.feedback__button}
           type="button"
-          onClick={onLeaveFeedback}
+          onClick={() => {
+            onLeaveFeedback(name);
+          }}
           data-name={name}
           key={name}
         >
@@ -20,6 +22,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  option: PropTypes.objectOf(PropTypes.number).isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };

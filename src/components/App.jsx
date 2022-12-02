@@ -10,8 +10,7 @@ class App extends Component {
     bad: 0,
   };
 
-  handleFeedback = ({ target }) => {
-    const { name } = target.dataset;
+  handleFeedback = name => {
     this.setState(prevState => {
       return { [name]: prevState[name] + 1 };
     });
